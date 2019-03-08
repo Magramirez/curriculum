@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+
+
+    <title>Magramirez</title>
+    <link href="../static/css/estilo.css" th:href="@{/css/estilo.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="separator">
+<h1>Curriculum Vitae</h1>
+</div>
+
+
+    <div class="container" id="header">
+        <img src="/images/foto.jpg" th:src="@{/images/foto.jpg}" id="foto">
+    </div>
+
+<div class="container" id="header2">
+<h2> <th th:text="${cv.apellidoPaterno} + ' ' + ${cv.apellidoMaterno}"></th><br>
+    <th th:text="${cv.nombre}"></th></h2>
+</div>
+
+<div class="separator">
+    Datos personales
+</div>
+
+
+
+    <div class="container" id="header3">
+        Dirección:  <th th:text="${cv.direccion}"></th><br><br>
+        Teléfono:  <th th:text="${cv.telefono}"></th><br><br>
+        Correo electrónico:  <th th:text="${cv.correo}"></th><br><br>
+    </div>
+
+
+    <div class="container" id="header4">
+        Universidad:  <th th:text="${cv.universidad}"></th><br>
+        <th th:text="${cv.carrera}"></th><br><br>
+        Preparatoria:  <th th:text="${cv.preparatoria}"></th><br>
+        Certificacion <th th:text="${cv.capacitacion}"></th><br>
+    </div>
+
+    <div class="container" id="header5">
+        Idioma nativo:  <th th:text="${cv.idiomaNat}"></th><br><br>
+        Idiomas adicionales:  <th th:text="${cv.idiomas}"></th>
+    </div>
+
+<div class="container" id="header6">
+    Descripcion: <th th:text="${cv.descripcion}"></th>
+</div>
+
+
+
+</div>
+</body>
+</html>
